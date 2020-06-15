@@ -1,0 +1,21 @@
+
+.Contact{
+    width:100vw;
+}
+
+#exampleEmail,#exampleText{
+    width:400px;
+}
+
+.Contact Button{
+    margin:1rem;
+    width:5rem;
+}
+.Contact Form{
+    margin-right:20rem;
+}
+
+.Contact h1{
+    padding-top:10rem;
+    padding-left:5rem;
+}

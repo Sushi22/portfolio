@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+
+.one,.two,.three,.four{
+    text-align: center;
+}
+
+.one{
+    color:white;
+    font-family:'Candal', sans-serif;
+    margin-top:150px;
+    font-size:40px;
+    
+}
+.two{
+    color:white;
+    font-family:'Candal', sans-serif;
+    font-size:30px;
+    margin-top:250px;
+
+}
+.three{
+    color:white;
+    font-family:'Candal', sans-serif;
+    font-size:40px;
+    margin-top:350px;
+}
+.four{
+    color:white;
+    font-family:'Candal', sans-serif;
+    font-size:30px;
+    margin-top:450px;
+
+}

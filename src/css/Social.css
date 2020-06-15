@@ -1,0 +1,73 @@
+.Social{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+   
+}
+
+.Social a{
+    color:inherit;
+    text-decoration: none;
+}
+
+#fb,#twi,#git,#in,#mail{
+    filter:drop-shadow(5px 2px 1px rgba(128, 128, 128, 0.6));
+    
+}
+
+#fb:hover{
+    color:#3b5998;
+    cursor:pointer;
+    transform: perspective(100px) translateZ(20px);
+    transition: linear 400ms;
+  
+    
+}
+#twi:hover{
+    color:#00acee;
+    cursor:pointer;
+    transform: perspective(100px) translateZ(20px);
+    transition: linear 400ms;
+   
+    
+}
+#in:hover{
+    color:#0e76a8 ;
+    cursor:pointer;
+    transform: perspective(100px) translateZ(20px);
+    transition: linear 400ms;
+  
+    
+}
+#git:hover{
+    color:#AD5C51;
+    cursor:pointer;
+    transform: perspective(100px) translateZ(20px);
+    transition: linear 350ms;
+    
+}
+
+#mail:hover{
+    cursor:pointer;
+    transform: perspective(100px) translateZ(20px);
+    transition: linear 350ms;
+}
+
+@media (max-device-width: 800px){
+
+    .Social{
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size:80%;
+        height:400px;
+        background-image: url("../photos/crop2.png");
+        background-repeat: no-repeat;
+        background-position: 90% 80%;
+        
+    
+    
+    }
+
+    
+    }

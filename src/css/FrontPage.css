@@ -1,0 +1,23 @@
+.FrontPage{
+    background-color:whitesmoke 0.6;
+    width:30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height:100vh;
+}
+
+@media (max-device-width: 800px){
+
+.FrontPage{
+    width:100vw;
+    height:100vh;
+    background-image: url("../photos/Zinc.jpg") ;
+    background-repeat: no-repeat;
+}
+
+.Photo{
+ display: none;   
+}
+  
+}

@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Titan+One&display=swap');
+.Intro{
+    
+    text-align: center;
+    flex-wrap: wrap;
+}
+.Intro h1{
+    font-family: 'Titan One', cursive;
+    letter-spacing: 0.2rem;
+    background: -webkit-linear-gradient(#06dce4, #03108d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.Intro h3{
+    font-family:'Roboto', sans-serif;
+    padding:2rem;
+    color:rgb(68, 61, 61);
+    
+}
+
+
+@media (max-device-width: 800px){
+
+    .Intro h1,h3{
+        
+        padding:1.3rem;
+        text-align:center;
+    }
+    
+}

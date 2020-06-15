@@ -1,0 +1,19 @@
+.App{
+  display:flex;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+}
+
+
+*{
+  margin:0;
+  padding:0;
+}
+
+#root{
+  height:100vh;
+}
+
