@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import '../css/Contact.css';
 import { Button, Form, FormGroup, Label, Input,} from 'reactstrap';
+import '../css/Contact.css';
+
 
 export default class Contact extends Component {
   state = {
@@ -14,6 +15,12 @@ export default class Contact extends Component {
   handleChange = this.handleChange.bind(this);
   handleSubmit = this.handleSubmit.bind(this);
   handleChangeEmail = this.handleChangeEmail.bind(this);
+  showMessage=this.showMessage.bind(this)
+
+
+  showMessage(){
+    alert("Message sent successfully");
+  }
 
   handleCancel() {
     this.setState({
@@ -75,20 +82,29 @@ export default class Contact extends Component {
 
   render() {
     return (
-    <div className="Contact">
-    <h1>Let's Talk</h1>
+    <div className="Contact" id="contactme">
+    <h1 class="con">Let's Talk</h1>
 
-    <Form onSubmit={this.handleSubmit}>
+    <Form onSubmit={this.handleSubmit} id="form">
       <FormGroup>
         <Label for="exampleEmail">Your Email</Label>
         <Input type="email" name="email" id="exampleEmail"  onChange={this.handleChangeEmail}/>
       </FormGroup>
       <FormGroup>
         <Label for="exampleText">Message</Label>
-        <Input type="textarea" name="text" id="exampleText" onChange={this.handleChange} />
+        <Input type="textarea" 
+  aria-label="maximum height"name="text" id="exampleText" onChange={this.handleChange} />
       </FormGroup>
-      <Button type="submit" value="Submit">Send</Button>
-      <Button onClick={this.handleCancel}>Cancel</Button>
+      <Button
+        type="submit"
+        value="Submit"
+        color="primary"
+        id="mybutton"
+        onClick={this.showMessage}
+      >
+        Send
+      </Button>
+      <Button  color="secondary" id="cancel" onClick={this.handleCancel}>Cancel</Button>
     </Form>
     </div>
 

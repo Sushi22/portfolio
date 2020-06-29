@@ -1,21 +1,55 @@
-
 .Contact{
-    width:100vw;
-}
+    display:flex;
+    height: 100vh;
+    flex-flow:column wrap;
+    width:100%;
+    position:relative;
+    scroll-snap-align: center ;
+    background-image: url('../photos/contact.png');
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    padding-top:12%;
+  
+  }
 
-#exampleEmail,#exampleText{
-    width:400px;
-}
+  .con{
+    margin-top:20px;
+    text-indent: 50%;
 
-.Contact Button{
-    margin:1rem;
-    width:5rem;
-}
-.Contact Form{
-    margin-right:20rem;
-}
+  }
 
-.Contact h1{
-    padding-top:10rem;
-    padding-left:5rem;
+  #form{
+    margin-left:50%;
+  }
+
+  #exampleText{
+    width:600px;
+    resize: none;
+  }
+
+  #exampleEmail{
+    width:600px;
+  }
+
+  #mybutton{
+    width:100px;
+    margin-right:20px;
+    margin-top: 10px;
+    
+  }
+
+  #cancel{
+    width:100px;
+    margin-top: 10px;
+    
+  }
+
+  @media (max-device-width: 800px){
+    .Contact{
+      scroll-snap-align: none;
+      display:block;
+      height:100vh;
+      
+    }
+   
 }

@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { env } from './config';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PhotoGallery from './components/PhotoGallery';
+import Contact from './components/Contact';
+import About from './components/About';
+import Nav from './components/Nav.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App env={env}/>
+    <Nav/>
+    <App />
+    <About/>
+    <Contact/>
+    <PhotoGallery/>
   </React.StrictMode>,
   document.getElementById('root')
 );

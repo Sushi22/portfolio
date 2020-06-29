@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Titan+One&display=swap');
+
+.mygallery{
+    display:flex;
+    height: 100vh;
+    width:100%;
+    flex-flow: column wrap;
+    align-items:center;
+    position:relative;
+    scroll-snap-align: center;
+    padding:10%;
+  }
+
+  
+  @media (max-device-width: 800px){
+      .mygallery{
+        display:none;
+      }
+     
+  }

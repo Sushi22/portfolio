@@ -5,9 +5,10 @@ import Quote from "../components/Quote.js";
 function Content(){
 
     return(
+        
         <div className="Content">
-            <Quote/>
             
+            <Quote/>
         </div>
 
     );

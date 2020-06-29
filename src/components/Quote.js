@@ -2,9 +2,9 @@ import React,{useEffect,useState} from 'react';
 import "../css/Quote.css";
 
 const Quote=()=>{
-    const quotes =["DREAM","Work Hard at it","Achieve it","and Move on.."];
+    const quotes =["DREAM","Work Hard at it", "Achieve it", "And Move on.."];
     const nameClass=["one","two","three","four"];
-    let n=quotes.length;
+    const n=quotes.length;
 
     const[i,setIndex]=useState(0);
 
