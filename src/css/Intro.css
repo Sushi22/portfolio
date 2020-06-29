@@ -13,12 +13,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.Intro h3{
-    font-family:'Roboto', sans-serif;
-    padding:0.5rem;
-    color:rgb(68, 61, 61);
-    
-}
 
 
 @media (max-device-width: 800px){
