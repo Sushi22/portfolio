@@ -1,2 +1,2 @@
 ### Sushmita's portfolio
- under progress :)
+ in progress :)
