@@ -1,8 +1,36 @@
 import React from 'react';
 import "../css/Sections.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+import gssummit from '../photos/gssummit.png';
+import cousera from '../photos/cousera.png';
+import devc from '../photos/devc.png';
+import Grow from '@material-ui/core/Grow';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+      flexWrap: 'wrap',
+     
+      '& > *': {
+        margin: theme.spacing(4),
+        width: theme.spacing(45),
+        height: theme.spacing(30),
+        },
+    },
+  }));
+  
+
+
 
 function Sections(props)
 {
+
+    const classes = useStyles();
+
+    const cftList =[gssummit,cousera,devc];
+
     console.log(props);
     if(props.prop==="intro")
     {
@@ -18,9 +46,12 @@ function Sections(props)
     {
         return(
             <div>
-                <p>
-                    react django etc.
-                </p>
+              <FontAwesomeIcon icon={['fab','html5']} size="5x"/>
+              <FontAwesomeIcon icon={['fab','css3']} size="5x"/>
+              <FontAwesomeIcon icon={['fab','js']} size="5x"/>
+              <FontAwesomeIcon icon={['fab','react']} size="5x"/>
+              <FontAwesomeIcon icon={['fab','python']} size="5x"/>
+              <img src="https://img.icons8.com/color/48/000000/django.png"/>
             </div>
         );
     }
@@ -29,17 +60,22 @@ function Sections(props)
         return(
             <div>
                 <p>
-                    competitive programming
+                   cp
                 </p>
             </div>
         );
     }
     else{
+        const myCft=cftList.map( (x)=>
+        <Grow in={true}  style={{ transitionDelay:'30ms'}}>
+            <Paper elevation={9}>
+            <img src={x} alt={x} style={{width:"350px",height:"250px",padding:"35px",opacity:"0.6"}}/>
+            </Paper> 
+        </Grow>
+        )
         return(
-            <div>
-                <p>
-                    certificates
-                </p>
+            <div className={classes.root}>
+              {myCft}
             </div>
         );
     }

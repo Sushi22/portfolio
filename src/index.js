@@ -14,8 +14,8 @@ ReactDOM.render(
     <Nav/>
     <App />
     <About/>
-    {/* <Contact/>
-    <PhotoGallery/> */}
+    <Contact/>
+    <PhotoGallery/>
   </React.StrictMode>,
   document.getElementById('root')
 );
