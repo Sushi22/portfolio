@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import techstack from '../photos/techstack.jpg';
@@ -23,14 +23,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Panel() {
+
+
+export default function Panel(props) {
   const classes = useStyles();
+ 
+  const myfunc1=props.func1;
+  const myfunc2=props.func2;
+  const myfunc3=props.func3;
+
+  console.log(myfunc1);
+  console.log(myfunc2);
+  console.log(myfunc3);
 
   return (
     <div className={classes.root} id="panel">
-      <Avatar alt="TechIcon" src={techstack} className={classes.large}/>
-      <Avatar alt="Travis Howard" src={cp} className={classes.large} />
-      <Avatar alt="Cindy Baker" src={crft4} className={classes.large}/>
+      <Avatar alt="TechIcon" src={techstack} className={classes.large} onClick={myfunc1}/>
+      <Avatar alt="Travis Howard" src={cp} className={classes.large}  onClick={myfunc2}/>
+      <Avatar alt="Cindy Baker" src={crft4} className={classes.large} onClick={myfunc3}/>
     </div>
   );
 }
