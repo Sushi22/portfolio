@@ -30,6 +30,7 @@ function Sections(props)
     const classes = useStyles();
 
     const cftList =[gssummit,cousera,devc];
+    const techList=["html5","css3","js","react","python"];
 
     console.log(props);
     if(props.prop==="intro")
@@ -44,24 +45,17 @@ function Sections(props)
     }
     else if(props.prop==="tech")
     {
+        const Listtech=techList.map((x)=><FontAwesomeIcon className="techicon" icon={['fab',x]} size="5x"/>)
         return(
-            <div>
-              <FontAwesomeIcon icon={['fab','html5']} size="5x"/>
-              <FontAwesomeIcon icon={['fab','css3']} size="5x"/>
-              <FontAwesomeIcon icon={['fab','js']} size="5x"/>
-              <FontAwesomeIcon icon={['fab','react']} size="5x"/>
-              <FontAwesomeIcon icon={['fab','python']} size="5x"/>
-              <img src="https://img.icons8.com/color/48/000000/django.png"/>
+            <div className="Sections">
+             {Listtech}
             </div>
         );
     }
     else if(props.prop==="cp")
     {
         return(
-            <div>
-                <p>
-                   cp
-                </p>
+            <div className="Sections">
             </div>
         );
     }
