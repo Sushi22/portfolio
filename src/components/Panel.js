@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import Tooltip from '@material-ui/core/Tooltip';
 import techstack from '../photos/techstack.jpg';
+import Zoom from '@material-ui/core/Zoom';
 import cp from '../photos/cp.jpg';
 import crft4 from '../photos/crft4.png';
 import '../css/Panel.css';
@@ -20,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   large: {
     width: theme.spacing(15),
     height: theme.spacing(15),
+    cursor: "pointer"
   },
 }));
 
