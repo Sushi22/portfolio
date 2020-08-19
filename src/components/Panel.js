@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import techstack from '../photos/techstack.jpg';
@@ -23,12 +23,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Panel() {
+
+
+export default function Panel(props) {
   const classes = useStyles();
+  const [myprop,propChange]=useState(props);
 
   return (
     <div className={classes.root} id="panel">
-      <Avatar alt="TechIcon" src={techstack} className={classes.large}/>
+      <Avatar alt="TechIcon" src={techstack} className={classes.large} onClick={propChange(myprop=>"tech")}/>
       <Avatar alt="Travis Howard" src={cp} className={classes.large} />
       <Avatar alt="Cindy Baker" src={crft4} className={classes.large}/>
     </div>

@@ -5,11 +5,12 @@ import Sections from './Sections.js';
 
 function About()
 {
+    const value="none";
     return(
 
         <div className="About" id="about">
-           <Panel/>
-           <Sections/>
+           <Panel prop={value}/>
+           <Sections prop={value}/>
         </div>
 
 
