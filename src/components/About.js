@@ -5,15 +5,6 @@ import Sections from './Sections.js';
 
 class About extends Component
 {
-<<<<<<< HEAD
-    const value="none";
-    return(
-
-        <div className="About" id="about">
-           <Panel prop={value}/>
-           <Sections prop={value}/>
-        </div>
-=======
     constructor()
     {
         super();
@@ -25,7 +16,6 @@ class About extends Component
         this.handleTrigger2=this.handleTrigger2.bind(this);
         this.handleTrigger3=this.handleTrigger3.bind(this);
     }
->>>>>>> 3d53de6e29aeb3151ba6cd248e78532fdc82a197
 
     handleTrigger1()
     {
@@ -71,5 +61,4 @@ class About extends Component
     }
    
 }
-
 export default About;

@@ -15,7 +15,7 @@ ReactDOM.render(
     <App />
     <About/>
     <Contact/>
-    <PhotoGallery/>
+    {/* <PhotoGallery/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

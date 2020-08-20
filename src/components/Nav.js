@@ -8,7 +8,7 @@ function Nav()
         <div className="Nav">
         <nav>
             <ul>
-                <li><a href="#gallery">PictureBook</a></li>
+                {/* <li><a href="#gallery">PictureBook</a></li> */}
                 <li><a href={resume}>Resume</a></li>
                 <li><a href="#contactme">Contact</a></li>
                 <li><a href="#about">About</a></li>

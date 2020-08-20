@@ -30,13 +30,24 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Panel(props) {
   const classes = useStyles();
-  const [myprop,propChange]=useState(props);
+ 
+  const myfunc1=props.func1;
+  const myfunc2=props.func2;
+  const myfunc3=props.func3;
+
 
   return (
     <div className={classes.root} id="panel">
-      <Avatar alt="TechIcon" src={techstack} className={classes.large} onClick={propChange(myprop=>"tech")}/>
-      <Avatar alt="Travis Howard" src={cp} className={classes.large} />
-      <Avatar alt="Cindy Baker" src={crft4} className={classes.large}/>
+      <Tooltip title="TechStack" TransitionComponent={Zoom}>
+        <Avatar alt="TechIcon" src={techstack} className={classes.large} onClick={myfunc1} />  
+      </Tooltip>
+      <Tooltip title="Coding Skills" TransitionComponent={Zoom}>
+        <Avatar alt="Travis Howard" src={cp} className={classes.large}  onClick={myfunc2}/> 
+      </Tooltip>
+      <Tooltip title="Certifications" TransitionComponent={Zoom}>
+        <Avatar alt="Cindy Baker" src={crft4} className={classes.large} onClick={myfunc3}/>
+      </Tooltip>
+     
     </div>
   );
 }
