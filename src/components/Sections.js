@@ -7,11 +7,17 @@ import gssummit from '../photos/gssummit.png';
 import cousera from '../photos/cousera.png';
 import devc from '../photos/devc.png';
 import Grow from '@material-ui/core/Grow';
+import { Icon } from '@iconify/react';
+import codechefIcon from '@iconify/icons-simple-icons/codechef';
+import geeksforgeeksIcon from '@iconify/icons-simple-icons/geeksforgeeks';
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
       flexWrap: 'wrap',
+      justifyContent:'space-between',
      
       '& > *': {
         margin: theme.spacing(4),
@@ -55,7 +61,10 @@ function Sections(props)
     else if(props.prop==="cp")
     {
         return(
-            <div className="Sections">
+            <div style={{display:"flex",flexDirection:"column", flexGrow:"1",flexWrap:"wrap",justifyContent:"space-around",paddingLeft:"250px"}}>
+                <FontAwesomeIcon icon={['fab',"hackerrank"]} size="3x"/>
+                <Icon icon={codechefIcon} height="60"width="80"/>
+                <Icon icon={geeksforgeeksIcon} height="60"width="80"/>
             </div>
         );
     }
