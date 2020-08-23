@@ -10,6 +10,7 @@ import Grow from '@material-ui/core/Grow';
 import { Icon } from '@iconify/react';
 import codechefIcon from '@iconify/icons-simple-icons/codechef';
 import geeksforgeeksIcon from '@iconify/icons-simple-icons/geeksforgeeks';
+import Progress from './Progress.js';
 
 
 
@@ -36,7 +37,8 @@ function Sections(props)
     const classes = useStyles();
 
     const cftList =[gssummit,cousera,devc];
-    const techList=["html5","css3","js","react","python"];
+    const techList=[["html5",70],["css3",70],["js",50],["react",45],["python",60]];
+    // const pro_list=[70,70,50,45,60];
 
     console.log(props);
     if(props.prop==="intro")
@@ -51,11 +53,24 @@ function Sections(props)
     }
     else if(props.prop==="tech")
     {
-        const Listtech=techList.map((x)=><FontAwesomeIcon className="techicon" icon={['fab',x]} size="5x"/>)
+        const Listtech=techList.map((x)=><div>
+             <FontAwesomeIcon className="techicon" icon={['fab',x[0]]} size="5x"/>
+                <p>{x[0]}</p>
+             <Progress done={x[1]}/>
+        </div>)
+           
+           
+       
+        // const ProgressList=pro_list.map((y)=><Progress done={y}/>)
         return(
-            <div className="Sections">
-             {Listtech}
-            </div>
+            <React.Fragment>
+                <div className="Sections">
+                    {Listtech}
+                </div>
+                {/* <div style={{display:"flex",flexDirection:"row", justifyContent:"space-evenly",flexWrap:"wrap",flexGrow:"1"}}>
+                {ProgressList}
+                </div> */}
+            </React.Fragment>
         );
     }
     else if(props.prop==="cp")
