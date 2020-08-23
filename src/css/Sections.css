@@ -1,12 +1,14 @@
 .Sections{
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    text-align:center;
 }
 
 .techicon
 {
     margin:20px;
+    padding-top:20px;
 }
 
