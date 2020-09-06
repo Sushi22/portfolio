@@ -11,22 +11,48 @@ import { Icon } from '@iconify/react';
 import codechefIcon from '@iconify/icons-simple-icons/codechef';
 import geeksforgeeksIcon from '@iconify/icons-simple-icons/geeksforgeeks';
 import Progress from './Progress.js';
+import Data from './Data.js';
+import Card from '@material-ui/core/Card';
+import { CardContent, Typography,Button, Badge } from '@material-ui/core';
+
 
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
+      minWidth: 275,
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent:'space-between',
+      textAlign:'center',
      
       '& > *': {
         margin: theme.spacing(4),
         width: theme.spacing(45),
         height: theme.spacing(30),
         },
+      
+      
     },
-  }));
+    pos:{
+        marginTop:"50px",
+    },
+    card:{
+        minWidth: 275,
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent:'space-between',
+        textAlign:'center',
+
+        '& > *': {
+            margin: theme.spacing(4),
+            width: theme.spacing(45),
+            height: theme.spacing(30),
+            },
+    }
+    
+}
+    ));
   
 
 
@@ -76,10 +102,39 @@ function Sections(props)
     else if(props.prop==="cp")
     {
         return(
-            <div style={{display:"flex",flexDirection:"column", flexGrow:"1",flexWrap:"wrap",justifyContent:"space-around",paddingLeft:"250px"}}>
-                <FontAwesomeIcon icon={['fab',"hackerrank"]} size="3x"/>
-                <Icon icon={codechefIcon} height="60"width="80"/>
-                <Icon icon={geeksforgeeksIcon} height="60"width="80"/>
+            <div style={{display:"flex",flexDirection:"row", flexGrow:"1",flexWrap:"wrap",justifyContent:"space-around"}}>
+                <div>
+                    <Data/>
+                    <FontAwesomeIcon icon={['fab',"hackerrank"]} size="3x"/>
+                   
+                </div>
+                <div>
+                    <Card className={classes.card} variant="outlined">
+                        <CardContent>
+                        <Typography variant="h4" color="textSecondary">
+                            Rating
+                        </Typography>
+                        <Typography variant="h3" color="textPrimary">
+                            1443
+                        </Typography>
+                        <Typography>
+                            <span style={{backgroundColor:"green", margin:"2px",color:"white"}}>★</span>
+                            <span style={{backgroundColor:"green",margin:"2px",color:"white"}}>★</span>
+                        </Typography>
+                        <Typography variant="body2" component="p">
+                            Highest Rating: 1532
+                        </Typography>
+                        <Button size="small" className={classes.pos}>See Full Profile</Button>
+                        </CardContent>
+                    </Card>
+                   
+                    <Icon icon={codechefIcon} height="60"width="80"/>
+                   
+                </div>
+                {/* <div>
+                    <Icon icon={geeksforgeeksIcon} height="60"width="80"/>
+                </div> */}
+                
             </div>
         );
     }
