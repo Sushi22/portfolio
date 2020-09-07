@@ -12,12 +12,12 @@ export default function Progress(props) {
 		}
 		
 		setStyle(newStyle);
-	}, 200);
+	},50);
 	
 	return (
 		<div className="progress">
 			<div className="progress-done" style={style}>
-				{props.done}%
+				{/* {props.done}% */}
 			</div>
 		</div>
 	)

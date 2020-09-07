@@ -42,7 +42,7 @@ export default class Data extends Component {
                 label: "Recent Activity",
                 data: [this.state.hr_data.ps,this.state.hr_data.js,this.state.hr_data.py],
                 fill: true,
-                backgroundColor: "rgba(75,192,192,0.2)",
+                backgroundColor: 'rgba(24,90,157,0.6)',
                 borderColor: "rgba(75,192,192,1)"
               }
             ]
@@ -51,8 +51,8 @@ export default class Data extends Component {
             <>
                <Bar
                 data={data}
-                width={500}
-                height={300}
+                width={400}
+                height={250}
                 />
             </>
         )

@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import gssummit from '../photos/gssummit.png';
 import cousera from '../photos/cousera.png';
-import devc from '../photos/devc.png';
+import devc2 from '../photos/devc2.png';
 import Grow from '@material-ui/core/Grow';
 import { Icon } from '@iconify/react';
 import codechefIcon from '@iconify/icons-simple-icons/codechef';
@@ -13,8 +13,7 @@ import geeksforgeeksIcon from '@iconify/icons-simple-icons/geeksforgeeks';
 import Progress from './Progress.js';
 import Data from './Data.js';
 import Card from '@material-ui/core/Card';
-import { CardContent, Typography,Button, Badge } from '@material-ui/core';
-
+import { CardContent, Typography,Button, Badge, Link } from '@material-ui/core';
 
 
 
@@ -25,11 +24,14 @@ const useStyles = makeStyles((theme) => ({
       flexWrap: 'wrap',
       justifyContent:'space-between',
       textAlign:'center',
+      position:'relative',
+     
      
       '& > *': {
         margin: theme.spacing(4),
         width: theme.spacing(45),
         height: theme.spacing(30),
+  
         },
       
       
@@ -37,20 +39,11 @@ const useStyles = makeStyles((theme) => ({
     pos:{
         marginTop:"50px",
     },
-    card:{
-        minWidth: 275,
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent:'space-between',
+    root1:{
+        minWidth:"600px",
         textAlign:'center',
+    },
 
-        '& > *': {
-            margin: theme.spacing(4),
-            width: theme.spacing(45),
-            height: theme.spacing(30),
-            },
-    }
-    
 }
     ));
   
@@ -62,17 +55,25 @@ function Sections(props)
 
     const classes = useStyles();
 
-    const cftList =[gssummit,cousera,devc];
-    const techList=[["html5",70],["css3",70],["js",50],["react",45],["python",60]];
+    const codechef_url="https://www.codechef.com/users/sushj2211";
+    const hr_url="https://www.hackerrank.com/sushmitajoshi22";
+
+    const c_url="https://www.coursera.org/account/accomplishments/certificate/WDWPB8GE3YXD";
+    const devc_url="https://openclassrooms.com/en/course-certificates/9712019675";
+    const gs_url="https://drive.google.com/file/d/13ocqrCzhY1ldEV0f7pvqiFtG_boqoRIF/view";
+
+    const cftList =[[gssummit,gs_url],[cousera,c_url],[devc2,devc_url]];
+    const techList=[["html5",70,"html5"],["css3",70,"css3"],["js",50,"javascript"],["react",45,"react"],["python",60,"python"]];
     // const pro_list=[70,70,50,45,60];
 
     console.log(props);
     if(props.prop==="intro")
     {
         return(
-            <div className="Sections">
-                <p>I am a Philomath , a Web Developer , open source Enthusiast and a passionate coder.
-                </p>
+            <div className="Sections_my">
+             
+                <Typography variant="h5">I am a Web Developer , an open source enthusiast and a passionate coder.</Typography>
+                {/* <FontAwesomeIcon icon={['fas',"code"]} color="#185a9d" size="3x"/>  */}
             </div>
     
         );
@@ -81,7 +82,7 @@ function Sections(props)
     {
         const Listtech=techList.map((x)=><div>
              <FontAwesomeIcon className="techicon" icon={['fab',x[0]]} size="5x"/>
-                <p>{x[0]}</p>
+                <p style={{textTransform:"uppercase",fontSize:"20px"}}>{x[2]}</p>
              <Progress done={x[1]}/>
         </div>)
            
@@ -104,12 +105,21 @@ function Sections(props)
         return(
             <div style={{display:"flex",flexDirection:"row", flexGrow:"1",flexWrap:"wrap",justifyContent:"space-around"}}>
                 <div>
-                    <Data/>
-                    <FontAwesomeIcon icon={['fab',"hackerrank"]} size="3x"/>
-                   
+                     <FontAwesomeIcon icon={['fab',"hackerrank"]} size="3x"/>
+                    <Card className={classes.root1} variant="outlined">
+                        <CardContent>
+                        <Data/>
+                        <a href={hr_url} style={{textDecoration:"none"}}>
+                            <Button size="small">See Full Profile</Button>
+                        </a>
+                    </CardContent>
+                      
+                    </Card>
+                    
                 </div>
                 <div>
-                    <Card className={classes.card} variant="outlined">
+                    <Icon icon={codechefIcon} height="60"width="80"/>
+                    <Card className={classes.root} variant="outlined">
                         <CardContent>
                         <Typography variant="h4" color="textSecondary">
                             Rating
@@ -124,12 +134,9 @@ function Sections(props)
                         <Typography variant="body2" component="p">
                             Highest Rating: 1532
                         </Typography>
-                        <Button size="small" className={classes.pos}>See Full Profile</Button>
+                        <a href={codechef_url} style={{textDecoration:"none"}}><Button size="small" className={classes.pos} >See Full Profile</Button></a>
                         </CardContent>
                     </Card>
-                   
-                    <Icon icon={codechefIcon} height="60"width="80"/>
-                   
                 </div>
                 {/* <div>
                     <Icon icon={geeksforgeeksIcon} height="60"width="80"/>
@@ -141,8 +148,11 @@ function Sections(props)
     else{
         const myCft=cftList.map( (x)=>
         <Grow in={true}  style={{ transitionDelay:'30ms'}}>
-            <Paper elevation={9}>
-            <img src={x} alt={x} style={{width:"350px",height:"250px",padding:"35px",opacity:"0.6"}}/>
+            <Paper elevation={9} className="my_cft">
+            <div>See full Certificate</div>
+            <a href={x[1]}>
+            <img src={x[0]} alt={x} style={{width:"350px",height:"250px",padding:"35px",opacity:"0.6",}}/>
+            </a>
             </Paper> 
         </Grow>
         )

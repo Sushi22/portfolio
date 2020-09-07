@@ -4,18 +4,17 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import PhotoGallery from './components/PhotoGallery';
 import Contact from './components/Contact';
 import About from './components/About';
 import Nav from './components/Nav.js';
+import { env } from './config';
 
 ReactDOM.render(
   <React.StrictMode>
     <Nav/>
     <App />
     <About/>
-    <Contact/>
-    {/* <PhotoGallery/> */}
+    <Contact env={env} />
   </React.StrictMode>,
   document.getElementById('root')
 );

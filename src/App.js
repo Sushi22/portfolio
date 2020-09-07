@@ -16,7 +16,6 @@ class App extends Component {
 
     return(
       <div className="App" id="app">
-      
         <FrontPage env={env}/>
         <Content/>
       </div>

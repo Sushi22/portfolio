@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input,} from 'reactstrap';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import {TextField,Button,Typography,TextareaAutosize} from '@material-ui/core/';
 import '../css/Contact.css';
+import {Component} from 'react';
 
 
 export default class Contact extends Component {
@@ -12,7 +14,7 @@ export default class Contact extends Component {
   };
 
   handleCancel = this.handleCancel.bind(this);
-  handleChange = this.handleChange.bind(this);
+  handleChangeMessage = this.handleChangeMessage.bind(this);
   handleSubmit = this.handleSubmit.bind(this);
   handleChangeEmail = this.handleChangeEmail.bind(this);
   showMessage=this.showMessage.bind(this)
@@ -29,7 +31,7 @@ export default class Contact extends Component {
     });
   }
 
-  handleChange(event) {
+  handleChangeMessage(event) {
     this.setState({
       Message: event.target.value,
     });
@@ -61,8 +63,7 @@ export default class Contact extends Component {
     });
   }
 
- // Note: this is using default_service, which will map to whatever
- // default email provider you've set in your EmailJS account.
+
   sendFeedback(templateId,user_email,Message, user) {
     window.emailjs
       .send('default_service', templateId, {
@@ -76,38 +77,54 @@ export default class Contact extends Component {
           formEmailSent: true
         });
       })
-      // Handle errors here however you like
+     
       .catch(err => console.error('Failed to send feedback. Error: ', err));
   }
 
   render() {
     return (
-    <div className="Contact" id="contactme">
-    <h1 class="con">Let's Talk</h1>
-
-    <Form onSubmit={this.handleSubmit} id="form">
-      <FormGroup>
-        <Label for="exampleEmail">Your Email</Label>
-        <Input type="email" name="email" id="exampleEmail"  onChange={this.handleChangeEmail}/>
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleText">Message</Label>
-        <Input type="textarea" 
-  aria-label="maximum height"name="text" id="exampleText" onChange={this.handleChange} />
-      </FormGroup>
-      <Button
-        type="submit"
-        value="Submit"
-        color="primary"
-        id="mybutton"
-        onClick={this.showMessage}
-      >
-        Send
-      </Button>
-      <Button  color="secondary" id="cancel" onClick={this.handleCancel}>Cancel</Button>
-    </Form>
-    </div>
-
+      <div className="Contact" id="contactme" >
+        <Typography component="h1" variant="h4">
+          Get in Touch !
+        </Typography>
+        <form onSubmit={this.handleSubmit} className="form">
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            id="email"
+            label="Email Address"
+            name="email"
+            onChange={this.handleChangeEmail}
+            autoComplete="email"
+          />
+          <TextField
+            multiline
+            variant="outlined"
+            aria-label="maximum height"
+            margin="normal"
+            required
+            onChange={this.handleChangeMessage}
+            label="Message"
+          />
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            id="my_button"
+          >
+            Send
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={this.handleCancel}
+            id="my_button"
+          >
+            Cancel
+          </Button>
+          </form>
+          </div>
 
     );
   }

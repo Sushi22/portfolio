@@ -4,11 +4,56 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     text-align:center;
+    margin-top:70px;
+}
+
+.Sections_my{
+    margin-top:60px;
+    width:600px;
+    align-self: center;
+    text-align: center;
+    padding:20px;
+
 }
 
 .techicon
 {
     margin:20px;
     padding-top:20px;
+    margin-top:70px;
 }
 
+.my_cft:hover{
+    cursor: pointer;
+}
+
+.my_cft div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #185a9d;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+   }
+
+    .my_cft:hover div{
+    width: 200px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 1;
+    }
+
+   .my_cft{
+    position: relative;
+    /* width: 200px;
+    height: 200px; */
+    /* float: left;
+    margin-right: 10px; */
+   }

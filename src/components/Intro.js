@@ -6,11 +6,8 @@ function Intro(){
     return(
 
     <div className="Intro">
-        
-        <Typing>
         <h1>Hello,</h1>
        <h1>I am Sushmita Joshi</h1>
-        </Typing>
     </div>
 
     );
