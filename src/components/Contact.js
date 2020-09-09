@@ -4,29 +4,30 @@ import { makeStyles } from '@material-ui/core/styles';
 import {TextField,Button,Typography,TextareaAutosize} from '@material-ui/core/';
 import '../css/Contact.css';
 import {Component} from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 export default class Contact extends Component {
   state = {
-    Message: '',
-    sender:'',
+    Message: 'hjg',
+    sender:'jhggj',
     formSubmitted: false
   };
+
+  
 
   handleCancel = this.handleCancel.bind(this);
   handleChangeMessage = this.handleChangeMessage.bind(this);
   handleSubmit = this.handleSubmit.bind(this);
   handleChangeEmail = this.handleChangeEmail.bind(this);
-  showMessage=this.showMessage.bind(this)
-
-
-  showMessage(){
-    alert("Message sent successfully");
-  }
 
   handleCancel() {
+    console.log("uhfkrug");
+    console.log(this.state.Message);
     this.setState({
-      Message: '',
+      Message:'',
       sender:''
     });
   }
@@ -60,7 +61,9 @@ export default class Contact extends Component {
 
     this.setState({
       formSubmitted: true
+      
     });
+    console.log(this.state.formSubmitted)
   }
 
 
@@ -73,6 +76,7 @@ export default class Contact extends Component {
         user
       )
       .then(res => {
+       
         this.setState({
           formEmailSent: true
         });
@@ -82,9 +86,27 @@ export default class Contact extends Component {
   }
 
   render() {
+
+    
+    const notify=()=>{
+      console.log(this.state.formEmailSent)
+      if(this.state.formEmailSent){
+      toast("Message sent successfully!",{
+        
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+       
+      });
+    }}
+
     return (
       <div className="Contact" id="contactme" >
-        <Typography component="h1" variant="h4">
+        <Typography component="h1" variant="h4" className="heading">
           Get in Touch !
         </Typography>
         <form onSubmit={this.handleSubmit} className="form">
@@ -112,9 +134,11 @@ export default class Contact extends Component {
             variant="contained"
             color="primary"
             id="my_button"
+            onClick={notify}
           >
             Send
           </Button>
+          <ToastContainer />
           <Button
             variant="contained"
             color="secondary"

@@ -10,6 +10,7 @@ import flipContext from '../components/context.js';
 import PropTypes from 'prop-types';
 
 
+
 const FrontPage=(props)=>{
 
     const [flip, setFlip] = useState(false);
@@ -28,7 +29,6 @@ const FrontPage=(props)=>{
     else{
         return(
             <div className="Frontpage">
-                <Contact env={props.env} />
                 <flipContext.Provider value={value}><Back/></flipContext.Provider>
 
             </div>

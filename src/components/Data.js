@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import {Bar} from "react-chartjs-2";
+import Loader from 'react-loader-spinner';
 
 export default class Data extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
+                loading:true,
                 hr_data:{
                     ps:0,
                     js:0,
@@ -24,17 +26,19 @@ export default class Data extends Component {
                             ps:Number(result['Problem Solving'].toString().split(" ")[0].split("%")[0]),
                             js:Number(result['10 Days of JS'].toString().split(" ")[0].split("%")[0]),
                             py:Number(result['Python'].toString().split(" ")[0].split("%")[0])
-                        }
+                        },
+                        loading:false
                     }
                 )
             // console.log(Number(result['Problem Solving'].toString().split(" ")[0].split("%")[0]));
-            console.log(this.state.hr_data);
+            // console.log(this.state.hr_data);
             }
         )
         
     }
 
     render() {
+        const loading=this.state.loading;
         const data = {
             labels: ["Problem Solving", "JavaScript", "Python",],
             datasets: [
@@ -48,13 +52,22 @@ export default class Data extends Component {
             ]
           };
         return (
-            <>
-               <Bar
+            <div>
+
+            {loading ?  <Loader
+         type="TailSpin"
+         color="orange"
+         height={100}
+         width={100}
+        //  timeout={3000} //3 secs
+ 
+      /> : <Bar
                 data={data}
-                width={400}
-                height={250}
-                />
-            </>
-        )
+                />}
+            </div>
+            
+              
+
+        );
     }
 }

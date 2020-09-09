@@ -19,12 +19,12 @@ import { CardContent, Typography,Button, Badge, Link } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-      minWidth: 275,
       display: 'flex',
+      flexDirection:'row',
       flexWrap: 'wrap',
-      justifyContent:'space-between',
-      textAlign:'center',
+      justifyContent:'space-evenly',
       position:'relative',
+      
      
      
       '& > *': {
@@ -39,11 +39,7 @@ const useStyles = makeStyles((theme) => ({
     pos:{
         marginTop:"50px",
     },
-    root1:{
-        minWidth:"600px",
-        textAlign:'center',
-    },
-
+   
 }
     ));
   
@@ -70,43 +66,38 @@ function Sections(props)
     if(props.prop==="intro")
     {
         return(
-            <div className="Sections_my">
-             
+            <div className="Sections_intro">
                 <Typography variant="h5">I am a Web Developer , an open source enthusiast and a passionate coder.</Typography>
-                {/* <FontAwesomeIcon icon={['fas',"code"]} color="#185a9d" size="3x"/>  */}
             </div>
     
         );
     }
+
+
     else if(props.prop==="tech")
     {
         const Listtech=techList.map((x)=><div>
-             <FontAwesomeIcon className="techicon" icon={['fab',x[0]]} size="5x"/>
+             <FontAwesomeIcon icon={['fab',x[0]]} size="4x"/>
                 <p style={{textTransform:"uppercase",fontSize:"20px"}}>{x[2]}</p>
              <Progress done={x[1]}/>
         </div>)
-           
-           
-       
-        // const ProgressList=pro_list.map((y)=><Progress done={y}/>)
         return(
             <React.Fragment>
-                <div className="Sections">
+                <div className="Sections_list">
                     {Listtech}
                 </div>
-                {/* <div style={{display:"flex",flexDirection:"row", justifyContent:"space-evenly",flexWrap:"wrap",flexGrow:"1"}}>
-                {ProgressList}
-                </div> */}
             </React.Fragment>
         );
     }
+
+
     else if(props.prop==="cp")
     {
         return(
-            <div style={{display:"flex",flexDirection:"row", flexGrow:"1",flexWrap:"wrap",justifyContent:"space-around"}}>
+            <div className="Sections_cp">
                 <div>
                      <FontAwesomeIcon icon={['fab',"hackerrank"]} size="3x"/>
-                    <Card className={classes.root1} variant="outlined">
+                    <Card className="root1" variant="outlined">
                         <CardContent>
                         <Data/>
                         <a href={hr_url} style={{textDecoration:"none"}}>
@@ -119,7 +110,7 @@ function Sections(props)
                 </div>
                 <div>
                     <Icon icon={codechefIcon} height="60"width="80"/>
-                    <Card className={classes.root} variant="outlined">
+                    <Card className="root1" variant="outlined">
                         <CardContent>
                         <Typography variant="h4" color="textSecondary">
                             Rating
@@ -145,7 +136,10 @@ function Sections(props)
             </div>
         );
     }
-    else{
+
+
+    else
+    {
         const myCft=cftList.map( (x)=>
         <Grow in={true}  style={{ transitionDelay:'30ms'}}>
             <Paper elevation={9} className="my_cft">

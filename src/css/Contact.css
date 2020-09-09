@@ -1,18 +1,23 @@
 .Contact{
     display:flex;
     height: 100vh;
-    flex-flow:column wrap;
-    width:100%;
+    flex-direction: column;
     position:relative;
+    width: 100%;
     scroll-snap-align: center ;
-    padding-top:12%;
     text-align:center;
     
+  }
+  .heading{
+    padding-top:200px;
+    color:black;
+    align-items: center;
+    width: 100%;
   }
 
   .form
   {
-    margin-top:30px;
+    margin-top:20px;
     display:flex;
     flex-direction: column;
     width:400px;
@@ -32,13 +37,13 @@
   
 
   @media (max-device-width: 800px){
+
     .Contact{
-      scroll-snap-align: none;
-      display:block;
-      height:100vh;
-      
+      display: flex;
+      flex-direction: column;
+      scroll-snap-align: none ;
     }
-   
+    
 }
 
 @-webkit-keyframes wobble-vertical-on-hover {

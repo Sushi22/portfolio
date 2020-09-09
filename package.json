@@ -20,15 +20,18 @@
     "react-chartjs-2": "^2.10.0",
     "react-dom": "^16.13.1",
     "react-images": "^1.1.7",
+    "react-loader-spinner": "^3.1.14",
     "react-photo-gallery": "^8.0.0",
+    "react-promise-tracker": "^2.1.0",
     "react-scripts": "^3.4.3",
+    "react-toastify": "^6.0.8",
     "react-typing-animation": "^1.6.2",
     "reactstrap": "^8.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

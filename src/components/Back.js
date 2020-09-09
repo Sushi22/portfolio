@@ -1,6 +1,6 @@
 import React,{useContext} from 'react';
 import flipContext from '../components/context.js';
-
+import { Divider } from '@material-ui/core';
 const Back=()=>
 {
 

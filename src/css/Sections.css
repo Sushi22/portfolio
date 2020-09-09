@@ -1,27 +1,44 @@
-.Sections{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    text-align:center;
-    margin-top:70px;
-}
-
-.Sections_my{
+.Sections_intro{
     margin-top:60px;
     width:600px;
     align-self: center;
     text-align: center;
     padding:20px;
+    
 
 }
 
-.techicon
-{
-    margin:20px;
-    padding-top:20px;
+.Sections_list{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align:center;
     margin-top:70px;
+
 }
+
+
+.Sections_cp{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    width:100%;
+
+   }
+
+
+.root1{
+    text-align:center;
+    min-width:600px;
+}
+
+.my_cft{
+    position: relative;
+   }
+
+
 
 .my_cft:hover{
     cursor: pointer;
@@ -43,17 +60,19 @@
     border-top-left-radius: 20px;
    }
 
-    .my_cft:hover div{
+.my_cft:hover div{
     width: 200px;
     padding: 8px 15px;
     visibility: visible;
     opacity: 1;
     }
 
-   .my_cft{
-    position: relative;
-    /* width: 200px;
-    height: 200px; */
-    /* float: left;
-    margin-right: 10px; */
-   }
+
+    @media (max-device-width: 800px)
+    {
+        .root1{
+            width:200px;
+            margin:20px;
+        }
+    }
+        
