@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.26b6b7bb.chunk.css",
-    "main.js": "/portfolio/static/js/main.7e69437b.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.7e69437b.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.ae20b839.chunk.css",
+    "main.js": "/portfolio/static/js/main.87eda8c9.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.87eda8c9.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.c60b095e.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.c60b095e.js.map",
     "static/css/2.e7c4c567.chunk.css": "/portfolio/static/css/2.e7c4c567.chunk.css",
-    "static/js/2.18393f1f.chunk.js": "/portfolio/static/js/2.18393f1f.chunk.js",
-    "static/js/2.18393f1f.chunk.js.map": "/portfolio/static/js/2.18393f1f.chunk.js.map",
+    "static/js/2.4736823f.chunk.js": "/portfolio/static/js/2.4736823f.chunk.js",
+    "static/js/2.4736823f.chunk.js.map": "/portfolio/static/js/2.4736823f.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.dc415673341433527f3325ab0c23e314.js": "/portfolio/precache-manifest.dc415673341433527f3325ab0c23e314.js",
+    "precache-manifest.a049712fb883d99d357ff86ba5913a13.js": "/portfolio/precache-manifest.a049712fb883d99d357ff86ba5913a13.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.e7c4c567.chunk.css.map": "/portfolio/static/css/2.e7c4c567.chunk.css.map",
-    "static/css/main.26b6b7bb.chunk.css.map": "/portfolio/static/css/main.26b6b7bb.chunk.css.map",
-    "static/js/2.18393f1f.chunk.js.LICENSE.txt": "/portfolio/static/js/2.18393f1f.chunk.js.LICENSE.txt",
+    "static/css/main.ae20b839.chunk.css.map": "/portfolio/static/css/main.ae20b839.chunk.css.map",
+    "static/js/2.4736823f.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4736823f.chunk.js.LICENSE.txt",
     "static/media/FrontPage.css": "/portfolio/static/media/Zinc.02150daf.jpg",
     "static/media/cousera.png": "/portfolio/static/media/cousera.0aab739f.png",
     "static/media/crft4.png": "/portfolio/static/media/crft4.20c7fc9c.png",
@@ -26,8 +26,8 @@
   "entrypoints": [
     "static/js/runtime-main.c60b095e.js",
     "static/css/2.e7c4c567.chunk.css",
-    "static/js/2.18393f1f.chunk.js",
-    "static/css/main.26b6b7bb.chunk.css",
-    "static/js/main.7e69437b.chunk.js"
+    "static/js/2.4736823f.chunk.js",
+    "static/css/main.ae20b839.chunk.css",
+    "static/js/main.87eda8c9.chunk.js"
   ]
 }
